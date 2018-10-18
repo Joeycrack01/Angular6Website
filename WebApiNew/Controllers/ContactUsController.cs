@@ -36,7 +36,7 @@ namespace WebApiNew.Controllers
         }
 
         [HttpPost("ContactUsPost")]
-        public async Task<IActionResult> ContactUsPost([FromBody]ContactUsViewModel contactUsVm)
+        public async Task<IActionResult> ContactUsPost(ContactUsViewModel contactUsVm)
         {
             var contct = new ContactUs();
             contct.UpdateContactUs(contactUsVm);

@@ -7619,8 +7619,8 @@ footer a:hover {
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("fonts/ionicons.eot");
-  src: url("fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("fonts/ionicons.ttf?v=2.0.0") format("truetype"), url("fonts/ionicons.woff?v=2.0.0") format("woff"), url("fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+  src: url("assets/fonts/ionicons.eot");
+  src: url("assets/fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("assets/fonts/ionicons.ttf") format("truetype"), url("assets/fonts/ionicons.woff?v=2.0.0") format("woff"), url("assets/fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }

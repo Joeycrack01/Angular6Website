@@ -259,3 +259,10 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/WebApiNew/ClientApp/src/app/plugin-frameworks
+/WebApiNew/ClientApp/src/app/images
+/WebApiNew/ClientApp/src/common
+/WebApiNew/ClientApp/src/fonts
+/WebApiNew/ClientApp/src/images
+/WebApiNew/ClientApp/src/plugin-frameworks
+/WebApiNew/ClientApp/src/app/common

@@ -10,12 +10,7 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-  contactForm = new FormGroup({
-    Name: new FormControl (''),
-    Email: new FormControl(''),
-    Message: new FormControl(''),
-
-  });
+  contactForm: FormGroup;
   loading = false;
   submitted = false;
 
@@ -29,9 +24,9 @@ export class ContactUsComponent implements OnInit {
   ngOnInit() {
     
     this.contactForm = this.formBuilder.group({
-      'Name': [null, [Validators.required]],
-      'Email': [null, [Validators.required, Validators.email]],
-      'Message': [null, Validators.required]
+      'Name': ['', [Validators.required]],
+      'Email': ['', [Validators.required, Validators.email]],
+      'Message': ['', [Validators.required]]
     });
   }
 
@@ -39,11 +34,12 @@ export class ContactUsComponent implements OnInit {
     return this.contactForm.controls;
   }
 
-  onSubmit(formData: NgForm) {
-    this.contactUsService.addContactUs(formData)
-    //if (this.contactForm.invalid) {
-    //  return;
-    } 
+  contact(formData: NgForm) {
+
+    this.contactUsService.addContact(formData)
+      
+  }  
+    
     //this.loading = true;
     //this.contactUsService.addContactUs(this.contactForm.value)
     //  .pipe(first())

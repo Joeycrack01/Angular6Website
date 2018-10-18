@@ -22,17 +22,49 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Compile Remove="%2a%2a\**" />
+    <Compile Remove="ClientApp\src\app\common\**" />
+    <Compile Remove="ClientApp\src\app\fonts\**" />
+    <Compile Remove="ClientApp\src\app\images\**" />
+    <Compile Remove="ClientApp\src\app\plugin-frameworks\**" />
+    <Compile Remove="ClientApp\src\common\**" />
+    <Compile Remove="ClientApp\src\fonts\**" />
+    <Compile Remove="ClientApp\src\images\**" />
+    <Compile Remove="ClientApp\src\plugin-frameworks\**" />
     <Compile Remove="Infrastructure\**" />
     <Content Remove="$(SpaRoot)**" />
     <Content Remove="%2a%2a\**" />
+    <Content Remove="ClientApp\src\app\common\**" />
+    <Content Remove="ClientApp\src\app\fonts\**" />
+    <Content Remove="ClientApp\src\app\images\**" />
+    <Content Remove="ClientApp\src\app\plugin-frameworks\**" />
+    <Content Remove="ClientApp\src\common\**" />
+    <Content Remove="ClientApp\src\fonts\**" />
+    <Content Remove="ClientApp\src\images\**" />
+    <Content Remove="ClientApp\src\plugin-frameworks\**" />
     <Content Remove="Infrastructure\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="%2a%2a\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\common\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\fonts\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\images\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\plugin-frameworks\**" />
+    <EmbeddedResource Remove="ClientApp\src\common\**" />
+    <EmbeddedResource Remove="ClientApp\src\fonts\**" />
+    <EmbeddedResource Remove="ClientApp\src\images\**" />
+    <EmbeddedResource Remove="ClientApp\src\plugin-frameworks\**" />
     <EmbeddedResource Remove="Infrastructure\**" />
     <None Remove="%2a%2a\**" />
+    <None Remove="ClientApp\src\app\common\**" />
+    <None Remove="ClientApp\src\app\fonts\**" />
+    <None Remove="ClientApp\src\app\images\**" />
+    <None Remove="ClientApp\src\app\plugin-frameworks\**" />
+    <None Remove="ClientApp\src\common\**" />
+    <None Remove="ClientApp\src\fonts\**" />
+    <None Remove="ClientApp\src\images\**" />
+    <None Remove="ClientApp\src\plugin-frameworks\**" />
     <None Remove="Infrastructure\**" />
   </ItemGroup>
 

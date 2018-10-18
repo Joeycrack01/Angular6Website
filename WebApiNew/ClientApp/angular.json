@@ -33,7 +33,8 @@
               "src/assets/jquery-3.2.1.min",
               "src/assets/bootstrap.js",
               "src/assets/tether.min.js",
-              "src/assets/script.js"
+             "src/assets/script.js",
+              "src/assets/common/script.js"
 
             ]
           },

@@ -25,7 +25,7 @@
       <div class="col-md-12 col-lg-8">
         <div class="p-30 mb-30 card-view">
           <h4 class="p-title"><b>GET IN TOUCH</b></h4>
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+          <form [formGroup]="contactForm" (ngSubmit)="contact(contactForm.value)">
             <!--<div class="form-group">-->
               <div class="col-sm-6 form-group">
                 <input class="mb-30 form-control" type="text" formControlName="Name" [ngClass]="{ 'is-invalid': submitted && fields.Name.errors}" placeholder="Your name">
