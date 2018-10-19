@@ -33,6 +33,13 @@ namespace WebApiNew.Controllers
             return articles;
         }
 
+        [HttpGet("[action]")]
+        public async Task<IEnumerable<Article>> GetAll()
+        {
+            var articles = await _articleRepository.GetALLArticles();
+            return articles;
+        }
+
         [HttpGet("{Id}")]
         public async Task<IEnumerable<ArticleListViewModel>> GetByCategory(int Id)
         {
@@ -46,7 +53,10 @@ namespace WebApiNew.Controllers
             return articles;
         }
 
-        public async Task<ArticleViewModel> GetByArticle(int Id)
+
+        //[HttpGet("{id}", Name = "GetByArticle")]
+        [HttpGet("[action]/")]
+        public async Task<ActionResult<ArticleViewModel>> GetByArticle(long Id)
         {
             var articles = await _articleRepository.GetArticle(Id);
             return articles;

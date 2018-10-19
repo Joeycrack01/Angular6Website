@@ -37,7 +37,7 @@ export class ContactUsComponent implements OnInit {
   contact(formData: NgForm) {
 
     this.contactUsService.addContact(formData)
-      
+    alert("POST Request is successful");
   }  
     
     //this.loading = true;

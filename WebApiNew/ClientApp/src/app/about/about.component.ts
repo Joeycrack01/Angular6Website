@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { AboutService } from './../Services/about.service';
+import { ArticleModel } from './../Model/ArticleModel';
+import { error } from 'protractor';
+//import { AboutService } from '../Services/';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  public aboutUs = {};
+  public errorMsg
+
+  constructor(private aboutService: AboutService) { }
 
   ngOnInit() {
+    this.getArticle();
+  }
+
+  getArticle() {
+    let about: ArticleModel;
+    this.aboutService.getArticle(1)
+      .subscribe(result => this.aboutUs = result,
+        error => this.errorMsg = error);
   }
 
 }

@@ -18,9 +18,9 @@ namespace WebApiNew.Services
             _context = context;
         }
 
-        public IEnumerable<Article> GetALLArticles()
+        public async Task<IEnumerable<Article>> GetALLArticles()
         {
-            var ArticCat = _context.Articles.ToList();
+            var ArticCat = await _context.Articles.ToListAsync();
             return ArticCat;
         }
 
@@ -40,7 +40,7 @@ namespace WebApiNew.Services
             return ArticCat;
         }
 
-        public async Task<ArticleViewModel> GetArticle(int Id)
+        public async Task<ArticleViewModel> GetArticle(long Id)
         {
             var ArticCat = await _context.Articles.Where(e => e.ID == Id)
                 .Select(y => new ArticleViewModel
@@ -94,6 +94,7 @@ namespace WebApiNew.Services
         Task<IEnumerable<ArticleListViewModel>> GetArticlesByCategory(int CatID);
         Task<IEnumerable<ArticleListViewModel>> GetArticlesByCatSect(int CatID, int sectionId);
         Task<IEnumerable<ArticleListViewModel>> GetArticleBySection(int sectionId);
-        Task<ArticleViewModel> GetArticle(int Id);
+        Task<ArticleViewModel> GetArticle(long Id);
+        Task<IEnumerable<Article>> GetALLArticles();
     };
 }
