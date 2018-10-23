@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams, HttpHeaders } from '@angular/common/http';
 import { ArticleModel } from './../Model/ArticleModel';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root', })
 
@@ -14,6 +15,10 @@ export class AboutService {
   constructor(private http: HttpClient) { }
 
   getArticle(input: number): Observable<ArticleModel> {
-    return this.http.get<ArticleModel>('api/Article/GetByArticle/' + input)
-  }
+    return this.http.get<ArticleModel>('api/Article/GetByArticle/' + input).
+      pipe(
+      tap(
+        ArticleModel => console.log(ArticleModel)
+        ))
+  };
 }

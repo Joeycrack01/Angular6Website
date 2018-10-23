@@ -18,6 +18,7 @@ namespace WebApiNew.Helpers
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Section> Sections { get; set; }
         public DbSet<ContactUs> ContactUs { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
     }
 }

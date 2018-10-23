@@ -55,11 +55,11 @@ namespace WebApiNew.Controllers
 
 
         //[HttpGet("{id}", Name = "GetByArticle")]
-        [HttpGet("[action]/")]
-        public async Task<ActionResult<ArticleViewModel>> GetByArticle(long Id)
+        [HttpGet("GetByArticle/{Id}")]
+        public  IActionResult GetByArticle(int Id)
         {
-            var articles = await _articleRepository.GetArticle(Id);
-            return articles;
+            var articles =  _articleRepository.GetArticle(Id);
+            return Ok(articles);
         }
 
     }

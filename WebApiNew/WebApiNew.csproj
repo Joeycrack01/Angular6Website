@@ -22,94 +22,185 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Compile Remove="%2a%2a\**" />
+    <Compile Remove="ClientApp\src\app\Admin\contactform\**" />
+    <Compile Remove="ClientApp\src\app\Admin\model\**" />
+    <Compile Remove="ClientApp\src\app\Admin\services\**" />
     <Compile Remove="ClientApp\src\app\common\**" />
-    <Compile Remove="ClientApp\src\app\fonts\**" />
     <Compile Remove="ClientApp\src\app\images\**" />
     <Compile Remove="ClientApp\src\app\plugin-frameworks\**" />
     <Compile Remove="ClientApp\src\common\**" />
     <Compile Remove="ClientApp\src\fonts\**" />
     <Compile Remove="ClientApp\src\images\**" />
     <Compile Remove="ClientApp\src\plugin-frameworks\**" />
+    <Compile Remove="Configurations\**" />
     <Compile Remove="Infrastructure\**" />
     <Content Remove="$(SpaRoot)**" />
     <Content Remove="%2a%2a\**" />
+    <Content Remove="ClientApp\src\app\Admin\contactform\**" />
+    <Content Remove="ClientApp\src\app\Admin\model\**" />
+    <Content Remove="ClientApp\src\app\Admin\services\**" />
     <Content Remove="ClientApp\src\app\common\**" />
-    <Content Remove="ClientApp\src\app\fonts\**" />
     <Content Remove="ClientApp\src\app\images\**" />
     <Content Remove="ClientApp\src\app\plugin-frameworks\**" />
     <Content Remove="ClientApp\src\common\**" />
     <Content Remove="ClientApp\src\fonts\**" />
     <Content Remove="ClientApp\src\images\**" />
     <Content Remove="ClientApp\src\plugin-frameworks\**" />
+    <Content Remove="Configurations\**" />
     <Content Remove="Infrastructure\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="%2a%2a\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\Admin\contactform\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\Admin\model\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\Admin\services\**" />
     <EmbeddedResource Remove="ClientApp\src\app\common\**" />
-    <EmbeddedResource Remove="ClientApp\src\app\fonts\**" />
     <EmbeddedResource Remove="ClientApp\src\app\images\**" />
     <EmbeddedResource Remove="ClientApp\src\app\plugin-frameworks\**" />
     <EmbeddedResource Remove="ClientApp\src\common\**" />
     <EmbeddedResource Remove="ClientApp\src\fonts\**" />
     <EmbeddedResource Remove="ClientApp\src\images\**" />
     <EmbeddedResource Remove="ClientApp\src\plugin-frameworks\**" />
+    <EmbeddedResource Remove="Configurations\**" />
     <EmbeddedResource Remove="Infrastructure\**" />
     <None Remove="%2a%2a\**" />
+    <None Remove="ClientApp\src\app\Admin\contactform\**" />
+    <None Remove="ClientApp\src\app\Admin\model\**" />
+    <None Remove="ClientApp\src\app\Admin\services\**" />
     <None Remove="ClientApp\src\app\common\**" />
-    <None Remove="ClientApp\src\app\fonts\**" />
     <None Remove="ClientApp\src\app\images\**" />
     <None Remove="ClientApp\src\app\plugin-frameworks\**" />
     <None Remove="ClientApp\src\common\**" />
     <None Remove="ClientApp\src\fonts\**" />
     <None Remove="ClientApp\src\images\**" />
     <None Remove="ClientApp\src\plugin-frameworks\**" />
+    <None Remove="Configurations\**" />
     <None Remove="Infrastructure\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="ClientApp\src\app\Model\Class.cs" />
-    <Compile Remove="ClientApp\src\app\Model\ContactUsModel.xaml.cs" />
-    <Compile Remove="Configurations\ArticleConfiguration.cs" />
-    <Compile Remove="Configurations\EntityBaseConfiguration.cs" />
-    <Compile Remove="Entities\IEntityBase.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Remove="ClientApp\src\app\Admin\app.component.css" />
+    <None Remove="ClientApp\src\app\Admin\app.component.css" />
+    <None Remove="ClientApp\src\app\Admin\app.component.html" />
+    <None Remove="ClientApp\src\app\Admin\app.component.html" />
+    <None Remove="ClientApp\src\app\Admin\app.component.spec.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.component.spec.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.component.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.component.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.material.module.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.material.module.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.module.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.module.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.routing.ts" />
+    <None Remove="ClientApp\src\app\Admin\app.routing.ts" />
     <None Remove="ClientApp\src\app\app-routing.module.ts" />
-    <None Remove="ClientApp\src\app\Model\Class.cs" />
-    <None Remove="ClientApp\src\app\Model\ContactUsModel.ts" />
+    <None Remove="ClientApp\src\app\app.material.module.ts" />
+    <None Remove="ClientApp\src\app\app.material.module.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="ClientApp\src\app\app-routing.module.ts">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientApp\src\app\Model\ContactUsModel.ts">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\..\..\..\..\JOEY%2527S\Documents\Visual Studio 2017\Projects\WebApiNew\WebApiNew\ClientApp\src\app\Model\WeatherForecastModel.ts" />
     <None Include="..\..\..\..\..\..\JOEY%2527S\Documents\Visual Studio 2017\Projects\WebApiNew\WebApiNew\ClientApp\src\app\Model\WeatherForecastModel.ts" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\common\scripts.js" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\common\scripts.js" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\common\styles.css" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\common\styles.css" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\plugin-frameworks\bootstrap.css" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\plugin-frameworks\bootstrap.css" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\plugin-frameworks\bootstrap.js" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\plugin-frameworks\bootstrap.js" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\plugin-frameworks\jquery-3.2.1.min.js" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\plugin-frameworks\jquery-3.2.1.min.js" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\plugin-frameworks\tether.min.js" />
-    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\assets\plugin-frameworks\tether.min.js" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.material.module.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.material.module.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.module.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.module.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.routing.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\app.routing.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactform\contactform.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactform\contactform.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactform\contactform.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactform\contactform.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactform\contactform.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactform\contactform.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactform\contactform.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactform\contactform.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactlist\contactlist.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactlist\contactlist.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactlist\contactlist.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactlist\contactlist.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactlist\contactlist.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactlist\contactlist.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactlist\contactlist.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\contactlist\contactlist.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\model\contact.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\model\contact.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\services\contact.service.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\services\contact.service.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\services\contact.service.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\services\contact.service.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\shared\DBOperation.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\shared\DBOperation.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\shared\Global.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\Admin\shared\Global.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.material.module.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.material.module.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.module.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.module.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.routing.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.routing.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactform\contactform.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactform\contactform.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactform\contactform.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactform\contactform.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactform\contactform.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactform\contactform.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactform\contactform.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactform\contactform.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactlist\contactlist.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactlist\contactlist.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactlist\contactlist.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactlist\contactlist.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactlist\contactlist.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactlist\contactlist.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactlist\contactlist.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\contactlist\contactlist.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\model\contact.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\model\contact.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\services\contact.service.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\services\contact.service.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\services\contact.service.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\services\contact.service.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\shared\DBOperation.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\shared\DBOperation.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\shared\Global.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\shared\Global.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configurations\" />
+    <Folder Include="ClientApp\src\app\app.material\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

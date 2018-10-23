@@ -26,16 +26,14 @@
               "src/styles.css",
               "src/assets/common/styles.css",
               "src/assets/fonts/ionicons.css",
-              "src/assets/plugin-frameworks/bootstrap.css",
-              "https://fonts.googleapis.com/css?family=Roboto:400,600,700"
+              "src/assets/plugin-frameworks/bootstrap.css"
+              //"https://fonts.googleapis.com/css?family=Roboto:400,600,700"
             ],
             "scripts": [
-              "src/assets/jquery-3.2.1.min",
-              "src/assets/bootstrap.js",
-              "src/assets/tether.min.js",
-             "src/assets/script.js",
-              "src/assets/common/script.js"
-
+              "src/assets/common/scripts.js",
+              "src/assets/plugin-frameworks/bootstrap.js",
+              "src/assets/plugin-frameworks/tether.min.js",
+              "src/assets/plugin-frameworks/jquery-3.2.1.min.js"
             ]
           },
           "configurations": {

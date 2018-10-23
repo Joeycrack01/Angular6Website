@@ -16,7 +16,7 @@ namespace WebApiNew.Extensions
             contactUs.Name = contactUsVm.Name;
             contactUs.Email = contactUsVm.Email;
             contactUs.Message = contactUsVm.Message;
-            contactUs.DateContacted = DateTime.UtcNow;
+            contactUs.DateContacted = contactUsVm.DateContacted;
 
 
         }

@@ -2,10 +2,8 @@ export interface ArticleModel
 {
 
   ID: number;
-  Title: string;
-  ArticleContent: string;
-  DateCreated: Date;
-  DateLastUpdated: Date;
+  title: string;
+  articleContent: string;
   Author: string;
   SectionID: number;
   CaptionImageUrl: string;

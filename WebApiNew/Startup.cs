@@ -43,6 +43,7 @@ namespace WebApiNew
             services.AddTransient<ISectioRepository, SectioRepository>();
             services.AddTransient<IErrorRepository, ErrorRepository>();
             services.AddTransient<IContactUsRepository, ContactUsRepository>();
+            services.AddTransient<IAddressRepository, AddressRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // configure strongly typed settings objects

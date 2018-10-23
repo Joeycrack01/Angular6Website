@@ -1,6 +1,6 @@
 import { Injectable , Inject} from '@angular/core';
-import { ContactUs } from './../Model/ContactUsModel';
-import { Observable, of } from 'rxjs';
+import { ContactUs, AddressModel } from './../Model/ContactUsModel';
+import { Observable, of, throwError } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
@@ -38,14 +38,83 @@ export class ContactUsService {
 
   }
 
-  //addContactUs(formData: NgForm) {
-  //  return this.http.post<any>('api/ContactUs/ContactUsPost', formData).pipe(
-  //    tap(contact => {
-  //      JSON.stringify(contact)
-  //      //console.log(contact);
+  getAddress(input: number): Observable<AddressModel> {
+    return this.http.get<AddressModel>('api/Address/GetAdress/' + input).
+      pipe(
+        
+        catchError(this.handleError)
+        );
+  };
 
-  //    }),
-  //     catchError(this.handleErrors('getHeroes', []))
-  //  );
-  //}
+  getAllContact(): Observable<ContactUs[]> {
+    return this.http.get<ContactUs[]>('api/ContactUs/GetContactUsList')
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+  
+
+  ViewContact(id: number): Observable<any> {
+    const newurl = `${'api/ContactUs/GetContactUsList'}?id=${id}`;
+    return this.http.get<ContactUs>(newurl, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error('An error occurred:', error.error.message);
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      console.error(
+        `Backend returned code ${error.status}, ` +
+        `body was: ${error.error}`);
+    }
+    // return an observable with a user-facing error message
+    return throwError('Something bad happened; please try again later.');
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

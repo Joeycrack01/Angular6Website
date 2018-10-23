@@ -11,20 +11,38 @@ import { error } from 'protractor';
 })
 export class AboutComponent implements OnInit {
 
-  public aboutUs = {};
+  
+
+  public aboutUs = {
+    'articleContent': '',
+    'title': '',
+    'ID': 0,
+    'Author': '',
+    'SectionID': 0,
+    'CaptionImageUrl': '',
+    'ArticleCategoryID': 0
+  };
+
   public errorMsg
+  public about: ArticleModel
+
 
   constructor(private aboutService: AboutService) { }
 
   ngOnInit() {
-    this.getArticle();
+    this.getArticle(1);
   }
 
-  getArticle() {
+  getArticle(Id: number) {
     let about: ArticleModel;
     this.aboutService.getArticle(1)
-      .subscribe(result => this.aboutUs = result,
-        error => this.errorMsg = error);
-  }
+      .subscribe(d => {
+        this.aboutUs = d
+        this.aboutUs.articleContent = d.articleContent;
+        this.aboutUs.title = d.title;
+        console.log(this.aboutUs);
 
+      }),
+      error => this.errorMsg = error;
+  };
 }
