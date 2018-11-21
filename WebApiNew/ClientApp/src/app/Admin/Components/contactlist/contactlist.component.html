@@ -1,46 +1,47 @@
-<div class="spinner" *ngIf="loadingState; else contactlist">
-  <mat-spinner></mat-spinner>
-</div>
-<ng-template class="contactlist" #contactlist>
-  <h2 style="text-align: center;">Contact List</h2>
-  <div class="contactlist-container mat-elevation-z8">
-    <div><button title="Create" mat-raised-button color="accent" (click)="addContact()">Create</button></div>
-    <table mat-table #table [dataSource]="dataSource">
-
-      <!-- Id Column -->
-      <!-- <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> Id </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-  </ng-container> -->
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
-      </ng-container>
-
-      <!-- Email Column -->
-      <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef> Email </th>
-        <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
-      </ng-container>
-
-      <!-- DateContacted Column -->
-      <ng-container matColumnDef="DateContacted">
-        <th mat-header-cell *matHeaderCellDef> Gender </th>
-        <td mat-cell *matCellDef="let element"> {{element.DateContacted | date: 'MM-dd-yyyy'}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="action">
-        <th mat-header-cell *matHeaderCellDef> Action </th>
-        <td mat-cell *matCellDef="let element">
-          <button title="Edit" mat-raised-button color="primary" (click)="editContact(element.id)">Edit</button>
-          <button title="Delete" mat-raised-button color="warn" (click)="deleteContact(element.id)">Delete</button>
-        </td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
   </div>
-</ng-template>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table"
+             *ngIf="contacts && contacts.length">
+        <thead>
+          <tr>
+            <td><b>S/No.</b></td>
+            <td><b>Name</b></td>
+            <td><b>Email</b></td>
+            <td><b>Date Contacted</b></td>
+            <td><b>Action</b></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let contact of contacts | paginate: { itemsPerPage: 3, currentPage: p, totalItems: total}'>
+            <td>
+              {{ contact.id }}
+              <!--<a [routerLink]="['/movies', movie.id]">
+
+              </a>-->
+            </td>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email}}</td>
+            <td>{{ contact.dateContacted | date}}</td>
+            <td>
+              <a class="btn btn-primary">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class='alert alert-danger'
+       *ngIf='errorMessage'>
+    Error: {{ errorMessage }}
+  </div>
+</div>
+&nbsp;
+<div class="pull-right">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

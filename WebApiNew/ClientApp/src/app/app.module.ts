@@ -3,17 +3,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { routes } from '../app/app.routes';
+
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { AppRoutingModule, routingComponents } from './app-routing.module';
-import { BusinessComponent } from './business/business.component';
-import { SportComponent } from './sport/sport.component';
-import { PoliticsComponent } from './politics/politics.component';
-import { AboutComponent } from './about/about.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+
+import { AdminModule } from '../app/admin/admin.module';
+import { IndexModule } from './index/index.module';
+import { AppRoutingModule } from './app-routing.module';
+import { handleErros } from './services/HandleErrors';
+import { HandleErrorsService } from '../app/Services/handle-errors.service';
 //import { ContactlistComponent } from './admin/contactlist/contactlist.component';
 
 //import { AppMaterialModule } from './app.material.module';
@@ -24,22 +22,23 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
-    routingComponents,
-    //ContactlistComponent
   ],
 
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    AppRoutingModule,
     ReactiveFormsModule,
+    AdminModule,
+    IndexModule,
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
+    
    //LayoutModule,
     //BrowserAnimationsModule,
     //AppMaterialModule
   ],
-  providers: [],
+  providers: [HandleErrorsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

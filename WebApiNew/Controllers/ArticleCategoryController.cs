@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiNew.Entities;
+using WebApiNew.Helpers;
 using WebApiNew.Services;
+using WebApiNew.ViewModels;
 
 namespace WebApiNew.Controllers
 {
@@ -24,11 +26,92 @@ namespace WebApiNew.Controllers
 
         }
 
-        [HttpGet("[action]")]
-        public async Task<IEnumerable<ArticleCategory>> GetByCatSect()
+        [HttpGet("GetCategories")]
+        public async Task<IEnumerable<ArticleCategory>> GetCategories()
         {
             var articles = await _articleCategoryRepository.GetAll();
             return articles;
+        }
+
+        [HttpGet("GetById/{Id}")]
+        public async Task<IActionResult> GetById(int Id)
+        {
+            var articles = await _articleCategoryRepository.GetCategory(Id);
+            return Ok(articles);
+        }
+
+        [HttpPost("CategoryPost")]
+        public async Task<IActionResult> CategoryPost([FromBody]CategoryViewModel categoryVm)
+        {
+            var contct = new ArticleCategory();
+            contct.CategoryName = categoryVm.CategoryName;
+
+            var dr = await _articleCategoryRepository.GetAll();
+
+            if (dr == null) {
+
+                throw new AppException("Invalid category");
+            }
+            else
+            { 
+                try
+                {
+                    if (dr.Any(a => a.CategoryName.Equals(contct.CategoryName, StringComparison.InvariantCultureIgnoreCase)))
+                    {
+                        throw new AppException("A Category With Name" + " " + '"' + contct.CategoryName + '"' + " " + "already exist");
+                    }
+                    await _articleCategoryRepository.AddCategory(contct);
+                    return Ok();
+                }
+                catch (AppException ex)
+                {
+                    return BadRequest(new { message = ex.Message });
+                }
+            }
+        }
+
+        [HttpPut("PutCategory")]
+        public async Task<IActionResult> PutCategory([FromBody]CategoryViewModel categoryVm)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                throw new Exception(string.Join("\n", ModelState.Keys.SelectMany(k => ModelState[k].Errors).Select(m => m.ErrorMessage).ToArray()));
+            }
+            else
+            {
+                var artic = new ArticleCategory();
+
+                var _article = await _articleCategoryRepository.GetCategory(categoryVm.Id);
+                if (_article == null)
+                {
+                    throw new Exception("Invalid article.");
+                }
+                else
+                {
+                    try
+                    {
+                        artic.CategoryName = categoryVm.CategoryName;
+                        artic.ID = categoryVm.Id;
+                        //_article.UpdateToArticle(articleVm);
+
+                        await _articleCategoryRepository.UpdateCategory(artic);
+
+
+                        return Ok();
+                    }
+
+                    catch (AppException ex)
+                    {
+                        return BadRequest(new { message = ex.Message });
+                    }
+                }
+
+
+
+
+            }
+
         }
     }
 }

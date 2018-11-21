@@ -31,6 +31,8 @@
 1. PRIMARY STYLES
 --------------------------------- */
 
+@import '~ngx-toastr/toastr.css';
+
 html{ font-size: 100%; overflow-x: hidden; width: 100%; margin: 0px;  padding: 0px; touch-action: manipulation; }
 
 
@@ -489,8 +491,8 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 .bg-2{ background: url(../images/slider-2-550x600.jpg) no-repeat center; background-size: cover; }
 .bg-3{ background: url(../images/slider-3-600x300.jpg) no-repeat center; background-size: cover; }
 .bg-4{ background: url(../images/slider-4-600x300.jpg) no-repeat center; background-size: cover; }
-.bg-5{ background: url(../images/slider-5-450x600.jpg) no-repeat center; background-size: cover; }
-.bg-6{ background: url(../images/slider-6-450x600.jpg) no-repeat center; background-size: cover; }
+/*.bg-5{ background: url(../images/slider-5-450x600.jpg) no-repeat center; background-size: cover; }*/
+/*.bg-6{ background: url(../images/slider-6-450x600.jpg) no-repeat center; background-size: cover; }*/
 .bg-7{ background: url(../images/banner-2-300x300.jpg) no-repeat center; background-size: cover; }
 .bg-8{ background: url(../images/slider-5-800x400.jpg) no-repeat center; background-size: cover; }
 .bg-9{ background: url(../images/slider-6-400x400.jpg) no-repeat center; background-size: cover; }

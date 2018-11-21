@@ -1,0 +1,26 @@
+<div class="card col-md-7">
+  <div class="card-header col-md-12">
+    {{pageTitle}}
+  </div>
+  <div class="card-body col-md-8" *ngIf="section">
+    <form novalidate [formGroup]="editForm" (ngSubmit)="saveSection()">
+      <fieldset>
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label" for="Section">Section Name:</label>
+          <div class="col-md-8">
+            <input class="form-control" type="text" placeholder="Section Name (required)" formControlName="Section" [ngClass]="{'is-invalid': formError.section }" />
+            <span class="invalid-feedback">
+              {{formError.section}}
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <button class="btn btn-primary mr-3" type="submit" style="width:80px;" [disabled]='!editForm.valid'>Save</button>
+            <button class="btn btn-outline-secondary" type="button" style="width:80px" [routerLink]="['/Admin/ArticleSections']">Cancel</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

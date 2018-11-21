@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
-import { ContactUs } from '../../../Model/ContactUsModel';
-import { ContactUsService } from '../../../Services/contact-us-service.service';
+import { ContactUs } from '../../../model/ContactUsModel';
+import { ContactUsService } from '../../../services/contact-us-service.service';
 import { DBOperation } from '../../shared/DBOperation';
 import { Global } from '../../shared/Global';
 
@@ -15,22 +15,18 @@ import { Global } from '../../shared/Global';
   styleUrls: ['./contactlist.component.css']
 })
 export class ContactlistComponent implements OnInit {
-  contacts: ContactUs[];
+  pageTitle = 'ContactUs List';
+  public contacts = [];
   contact: ContactUs;
-  loadingState: boolean;
-  dbops: DBOperation;
-  modalTitle: string;
-  modalBtnTitle: string;
-
-  // set columns that will need to show in listing table
-  displayedColumns = ['name', 'email', 'DateContacted', 'action'];
-  // setting up datasource for material table
-  dataSource = new MatTableDataSource<ContactUs>();
-
-  constructor(public snackBar: MatSnackBar, private _contactService: ContactUsService, private dialog: MatDialog) { }
+  total: number;
+  constructor(private _contactService: ContactUsService) {
+    for (let i = 1; i <= 100; i++) {
+      this.contacts.push(`contact ${i}`)
+    }
+  }
 
   ngOnInit() {
-    this.loadingState = true;
+    //this.loadingState = true;
     this.loadContacts();
   }
   //openDialog(): void {
@@ -63,11 +59,11 @@ export class ContactlistComponent implements OnInit {
   //  });
   //}
 
-  loadContacts(): void {
+  loadContacts() {
     this._contactService.getAllContact()
-      .subscribe(contacts => {
-        this.loadingState = false;
-        this.dataSource.data = contacts;
+      .subscribe(result => {
+        this.total = result.length;
+        this.contacts = result;
       });
   }
 
@@ -95,9 +91,9 @@ export class ContactlistComponent implements OnInit {
   //  this.contact = this.dataSource.data.filter(x => x.ID === id)[0];
   //  this.openDialog();
   //}
-  showMessage(msg: string) {
-    this.snackBar.open(msg, '', {
-      duration: 3000
-    });
-  }
+  //showMessage(msg: string) {
+  //  this.snackBar.open(msg, '', {
+  //    duration: 3000
+  //  });
+  //}
 }

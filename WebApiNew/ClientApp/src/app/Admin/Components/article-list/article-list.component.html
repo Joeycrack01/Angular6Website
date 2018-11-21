@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 ">
+        <a class="btn btn-primary"
+           [routerLink]="['/Admin/ArticleList', 0, 'articleEdit']">
+          Add Article
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table"
+           *ngIf="articles && articles.length">
+      <thead>
+        <tr>
+          <td><b>S/No.</b></td>
+          <td><b>Title</b></td>
+          <td><b>Author</b></td>
+          <td><b>Category</b></td>
+          <td><b>Section</b></td>
+          <td><b>Date Created</b></td>
+          <td><b>Action</b></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let article of articles | paginate: { itemsPerPage: 3, currentPage: p }'>
+          <td>{{ article.id }}</td>
+          <td>{{ article.title }}</td>
+          <td>{{ article.author}}</td>
+          <td>{{ article.categoryName }}</td>
+          <td>{{ article.sectionName }}</td>
+          <td>{{ article.dateCreated | date}}</td>
+          <td>
+            <a class="btn btn-primary"
+               [routerLink]="['/Admin/ArticleList', article.id, 'articleEdit']">
+              Edit
+            </a>&nbsp;
+            <a class="btn btn-danger">
+              Delete
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+&nbsp;
+<div class="pull-right">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+<div class='alert alert-danger'
+     *ngIf='errorMessage'>
+  Error: {{ errorMessage }}
+</div>
+

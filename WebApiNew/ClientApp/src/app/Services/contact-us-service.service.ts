@@ -4,6 +4,7 @@ import { Observable, of, throwError } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { HandleErrorsService } from '../Services/handle-errors.service';
 
 
 const httpOptions = {
@@ -25,7 +26,7 @@ export class ContactUsService {
     };
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _handleError: HandleErrorsService) { }
 
   addContact(formData: NgForm) {
 
@@ -33,32 +34,32 @@ export class ContactUsService {
       .subscribe(contact => {
         console.log(contact);
       },
-        catchError(this.handleErrors('addContact', formData))
+      catchError(this._handleError.handleErrors('addContact', formData))
       );
 
   }
 
-  getAddress(input: number): Observable<AddressModel> {
-    return this.http.get<AddressModel>('api/Address/GetAdress/' + input).
-      pipe(
-        
-        catchError(this.handleError)
+  getAddress(input: number): Observable<any> {
+    return this.http.get<AddressModel>('api/Address/GetAdress/' + input)
+      .pipe(
+        catchError(this._handleError.handleErrors('getAddress', input))
         );
   };
 
   getAllContact(): Observable<ContactUs[]> {
-    return this.http.get<ContactUs[]>('api/ContactUs/GetContactUsList')
+    return this.http.get<ContactUs[]>('api/ContactUs/GetContactUsList/')
       .pipe(
-        catchError(this.handleError)
-      );
-  }
+        tap(
+          ContactUs => console.log(ContactUs)
+        ))
+  };
   
 
   ViewContact(id: number): Observable<any> {
     const newurl = `${'api/ContactUs/GetContactUsList'}?id=${id}`;
     return this.http.get<ContactUs>(newurl, httpOptions)
       .pipe(
-        catchError(this.handleError)
+        catchError(this._handleError.handleErrors('ViewContact', id))
       );
   }
 

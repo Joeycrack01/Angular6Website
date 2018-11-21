@@ -1,0 +1,63 @@
+<section class="pt-30 pb-0">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 col-lg-12">
+
+        <div class="ptb-0">
+          <a class="mt-10" href="#"><i class="mr-5 ion-ios-home"></i><b>HOME</b></a>
+          <a class="mt-10 color-ash" href="#"><i class="mlr-10 ion-chevron-right"></i><b>CONTACT US</b></a>
+        </div>
+
+        <!--<div class="p-30 mtb-30 card-view">
+          
+        </div>--><!-- card-view -->
+      </div><!-- col-sm-12 -->
+
+    </div><!-- row -->
+  </div><!-- container -->
+</section>
+
+
+<section class="pt-0 pb-20">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <div class="p-30 mb-30 card-view">
+          <h4 class="p-title"><b>GET IN TOUCH</b></h4>
+          <form [formGroup]="contactForm" (ngSubmit)="contact(contactForm.value)">
+            <!--<div class="form-group">-->
+              <div class="col-sm-6 form-group">
+                <input class="mb-30 form-control" type="text" formControlName="Name" [ngClass]="{ 'is-invalid': submitted && fields.Name.errors}" placeholder="Your name">
+              </div><!-- col-sm-6 -->
+              <div class="col-sm-6 form-group">
+                <input class="mb-30 form-control" type="text" formControlName="Email" [ngClass]="{ 'is-invalid': submitted && fields.Email.errors}" placeholder="Your email">
+              </div><!-- col-sm-6 -->
+              <div class="col-sm-12 form-group">
+                <textarea class="mb-30 form-control" rows="10" cols="30" formControlName="Message" [ngClass]="{ 'is-invalid': submitted && fields.Message.errors}" placeholder="Your message"></textarea>
+              </div><!-- col-sm-12 -->
+
+            <!--</div>--><!-- row -->
+            <div class="form-group ">
+              <button [disabled]="loading" class="btn-fill-primary plr-20" type="submit"><b>SUBMIT NOW</b></button>
+            </div>
+            <!--<a class="btn-fill-primary plr-20" href="#"><b>SUBMIT NOW</b></a>-->
+          </form>
+        </div><!-- card-view -->
+      </div><!-- col-sm-12 -->
+      <div class="col-md-12 col-lg-4">
+
+        <div class="p-30 mb-30 card-view">
+          <h4 class="p-title"><b>OUR OFFICE</b></h4>
+          <ul class="list-contact list-li-mb-20">
+            <li style="color:#337ab7"><i class="ion-ios-home"></i>{{address.officeLocation}}</li>
+            <li style="color:#337ab7"><i class="ion-ios-telephone"></i>{{address.officeContacNo}}</li>
+            <li style="color:#337ab7"><i class="ion-email"></i>{{address.email}}</li>
+            <li class="mb-0" style="color:#337ab7"><i class="ion-ios-world"></i>{{address.website}}</li>
+          </ul>
+        </div><!-- card-view -->
+      </div><!-- col-sm-12 -->
+
+    </div><!-- row -->
+  </div><!-- container -->
+</section>

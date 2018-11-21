@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table"
+             *ngIf="contacts && contacts.length">
+        <thead>
+          <tr>
+            <td><b>S/No.</b></td>
+            <td><b>Name</b></td>
+            <td><b>Email</b></td>
+            <td><b>Date Contacted</b></td>
+            <td><b>Action</b></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let contact of contacts | paginate: { itemsPerPage: 3, currentPage: p }'>
+            <td>
+              {{ contact.id }}
+              <!--<a [routerLink]="['/movies', movie.id]">
+
+              </a>-->
+            </td>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email}}</td>
+            <td>{{ contact.dateContacted | date}}</td>
+            <td>
+              <a class="btn btn-primary">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class='alert alert-danger'
+       *ngIf='errorMessage'>
+    Error: {{ errorMessage }}
+  </div>
+</div>
+<div class="pull-right">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

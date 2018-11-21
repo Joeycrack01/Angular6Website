@@ -27,6 +27,7 @@
     <Compile Remove="ClientApp\src\app\Admin\services\**" />
     <Compile Remove="ClientApp\src\app\common\**" />
     <Compile Remove="ClientApp\src\app\images\**" />
+    <Compile Remove="ClientApp\src\app\index\nav-menu\**" />
     <Compile Remove="ClientApp\src\app\plugin-frameworks\**" />
     <Compile Remove="ClientApp\src\common\**" />
     <Compile Remove="ClientApp\src\fonts\**" />
@@ -41,6 +42,7 @@
     <Content Remove="ClientApp\src\app\Admin\services\**" />
     <Content Remove="ClientApp\src\app\common\**" />
     <Content Remove="ClientApp\src\app\images\**" />
+    <Content Remove="ClientApp\src\app\index\nav-menu\**" />
     <Content Remove="ClientApp\src\app\plugin-frameworks\**" />
     <Content Remove="ClientApp\src\common\**" />
     <Content Remove="ClientApp\src\fonts\**" />
@@ -58,6 +60,7 @@
     <EmbeddedResource Remove="ClientApp\src\app\Admin\services\**" />
     <EmbeddedResource Remove="ClientApp\src\app\common\**" />
     <EmbeddedResource Remove="ClientApp\src\app\images\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\index\nav-menu\**" />
     <EmbeddedResource Remove="ClientApp\src\app\plugin-frameworks\**" />
     <EmbeddedResource Remove="ClientApp\src\common\**" />
     <EmbeddedResource Remove="ClientApp\src\fonts\**" />
@@ -71,6 +74,7 @@
     <None Remove="ClientApp\src\app\Admin\services\**" />
     <None Remove="ClientApp\src\app\common\**" />
     <None Remove="ClientApp\src\app\images\**" />
+    <None Remove="ClientApp\src\app\index\nav-menu\**" />
     <None Remove="ClientApp\src\app\plugin-frameworks\**" />
     <None Remove="ClientApp\src\common\**" />
     <None Remove="ClientApp\src\fonts\**" />
@@ -95,15 +99,12 @@
     <None Remove="ClientApp\src\app\Admin\app.module.ts" />
     <None Remove="ClientApp\src\app\Admin\app.routing.ts" />
     <None Remove="ClientApp\src\app\Admin\app.routing.ts" />
-    <None Remove="ClientApp\src\app\app-routing.module.ts" />
+    <None Remove="ClientApp\src\app\Admin\router.module.ts" />
+    <None Remove="ClientApp\src\app\Admin\router.module.ts" />
     <None Remove="ClientApp\src\app\app.material.module.ts" />
     <None Remove="ClientApp\src\app\app.material.module.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="ClientApp\src\app\app-routing.module.ts">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
+    <None Remove="ClientApp\src\app\Services\HandleErrors.ts" />
+    <None Remove="ClientApp\src\app\Services\HandleErrors.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -163,6 +164,22 @@
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.module.ts" />
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.routing.ts" />
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\app.routing.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\article-list\article-list.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\article-list\article-list.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\article-list\article-list.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\article-list\article-list.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\article-list\article-list.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\article-list\article-list.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\article-list\article-list.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\article-list\article-list.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\articlecategory\articlecategory.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\articlecategory\articlecategory.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\articlecategory\articlecategory.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\articlecategory\articlecategory.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\articlecategory\articlecategory.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\articlecategory\articlecategory.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\articlecategory\articlecategory.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\articlecategory\articlecategory.component.ts" />
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.css" />
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.css" />
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\Components\contactlist\contactlist.component.html" />
@@ -197,9 +214,70 @@
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\shared\DBOperation.ts" />
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\shared\Global.ts" />
     <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\Admin\shared\Global.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\about\about.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\about\about.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\about\about.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\about\about.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\about\about.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\about\about.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\about\about.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\about\about.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\business\business.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\business\business.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\business\business.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\business\business.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\business\business.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\business\business.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\business\business.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\business\business.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\contact-us\contact-us.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\contact-us\contact-us.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\contact-us\contact-us.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\contact-us\contact-us.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\contact-us\contact-us.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\contact-us\contact-us.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\contact-us\contact-us.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\contact-us\contact-us.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\counter\counter.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\counter\counter.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\counter\counter.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\counter\counter.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\counter\counter.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\counter\counter.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\fetch-data\fetch-data.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\fetch-data\fetch-data.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\fetch-data\fetch-data.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\fetch-data\fetch-data.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\home\home.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\home\home.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\home\home.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\home\home.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\nav-menu\nav-menu.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\nav-menu\nav-menu.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\nav-menu\nav-menu.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\nav-menu\nav-menu.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\nav-menu\nav-menu.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\nav-menu\nav-menu.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\politics\politics.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\politics\politics.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\politics\politics.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\politics\politics.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\politics\politics.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\politics\politics.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\politics\politics.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\politics\politics.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\sport\sport.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\sport\sport.component.css" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\sport\sport.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\sport\sport.component.html" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\sport\sport.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\sport\sport.component.spec.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\sport\sport.component.ts" />
+    <None Include="..\..\..\..\..\JOEY%2527S\Source\Repos\angular6Website\WebApiNew\ClientApp\src\app\index\sport\sport.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\Admin\Components\admin-module\" />
     <Folder Include="ClientApp\src\app\app.material\" />
   </ItemGroup>
 

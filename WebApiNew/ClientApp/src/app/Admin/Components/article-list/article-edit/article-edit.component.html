@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body" *ngIf="article">
+    <form novalidate [formGroup]="editForm" (ngSubmit)="saveArticle()">
+      <fieldset>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="Title">Article Title</label>
+          <div class="col-md-8">
+            <input class="form-control" type="text" placeholder="Title (required)"  formControlName="title" [ngClass]="{'is-invalid': formError.title }"/>
+            <span class="invalid-feedback">
+              {{formError.title}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="Author">Author</label>
+          <div class="col-md-8">
+            <input class="form-control" type="text" placeholder="Author (required)" formControlName="author" [ngClass]="{'is-invalid': formError.author }"/>
+            <span class="invalid-feedback">
+              {{formError.author}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="Category">Article Category</label>
+          <div class="col-md-8">
+            <select class="form-control form-control-lg" [(ngModel)]="article.articleCategoryID" formControlName="Category">
+              <option *ngFor="let category of categories" [value]="category.id" >{{category.categoryName}}</option>
+            </select>
+            <span class="invalid-feedback">
+              {{formError.category}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="SectionName">Article Section</label>
+          <div class="col-md-8">
+            <select class="form-control form-control-lg" id="SectionName" [(ngModel)]="article.sectionID" type="text" formControlName="SectionName">
+              <option *ngFor="let section of sections" [value]="section.id" >{{section.sectionName}}</option>
+            </select>
+            <span class="invalid-feedback">
+              {{formError.section}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="articleContent">Article Content</label>
+          <div class="col-md-8">
+            <textarea class="form-control" id="articleContent" type="text" formControlName="articleContent"></textarea>
+            <span class="invalid-feedback">
+              {{formError.content}}
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <button class="btn btn-primary mr-3" type="submit" style="width:80px;" [disabled]='!editForm.valid'>Save</button>
+            <button class="btn btn-outline-secondary" type="button" style="width:80px" [routerLink]="['/Admin/ArticleList']">Cancel</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
